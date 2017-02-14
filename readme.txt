@@ -1,8 +1,10 @@
-=== Twenty Twelve ===
-Contributors: the WordPress team
-Requires at least: WordPress 3.5
-Tested up to: WordPress 4.8-trunk
-Stable tag: 2.2
-License: GPLv2 or later
+Theme Name: Crowded News
+Theme URI:
+Author: Claudiu Lodromanean
+Author URI: 
+Description: A news theme with a crowded aesthetic similar popular Chinese news sites
+Version: 1.0
+License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Tags: news, newspaper, three-column
+Text Domain: cnews
