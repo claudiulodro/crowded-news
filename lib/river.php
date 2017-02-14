@@ -29,7 +29,7 @@ class CN_PostSections {
 				array(
 					'key' => $meta_key,
 					'value' => 1
-				);
+				)
 			)
 		);
 
