@@ -6,16 +6,15 @@
 	</div>
 
 	<div class="container">
-		<div class="section">
+		<div class="section above-fold">
 			<?php get_template_part( 'home/carousel' ) ?>
 			<?php get_template_part( 'home/featured' ) ?>
 		</div>
-		<div class="section">
+		<div class="section below-fold">
 			<div class="wrap">
 				<?php get_template_part( 'home/spotlight' ) ?>
-				<?php get_template_part( 'home/carousel-row' ) ?>
-				<?php get_template_part( 'home/carousel-row' ) ?>
-				<?php get_template_part( 'home/category' ) ?>
+				<?php get_template_part( 'home/carousel-rows' ) ?>
+				<?php get_template_part( 'home/categories' ) ?>
 			</div>
 			<div class="sidebar right">
 				<?php get_template_part( 'sidebar/archive-right' ) ?>

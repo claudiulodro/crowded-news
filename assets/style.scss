@@ -1,0 +1,81 @@
+//Vars
+$site-width: 990px;
+$nav-height: 140px;
+
+//Site
+.site {
+	max-width: $site-width;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: gray;
+}
+
+//Nav
+.m-nav {
+	height: $nav_height;
+	background-color: silver;
+}
+
+//Archive Pages
+.m-archive {
+	overflow: hidden;
+
+	.sidebar.left {
+		width: 100px;
+		background-color: red;
+		float: left;
+	}
+
+	.container {
+		width: calc(100% - 100px);
+		background-color: pink;
+		float: left;
+	}
+
+	.above-fold {
+		overflow: hidden;
+	}
+
+	.below-fold {
+		overflow: hidden;
+
+		.wrap {
+			float: left;
+			width: calc(100% - 330px);
+			background-color: yellow;
+		}
+
+		.sidebar.right {
+			float: left;
+			width: 330px;
+			background-color: orange;
+		}
+	}
+}
+
+.m-home-featured {
+	float: left;
+	width: 300px;
+}
+
+.m-home-carousel {
+	float: left;
+	width: calc(100% - 300px);
+}
+
+.m-home-spotlight {
+	.items.main {
+		.item {
+			width: calc(50% - 2px);
+			float: left;
+			border: 1px solid black;
+		}
+	}
+}
+
+.m-carousel-row {
+	height: 125px;
+	margin: 5px;
+	border: 1px solid black;
+}
