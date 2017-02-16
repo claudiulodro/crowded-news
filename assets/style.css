@@ -1,23 +1,60 @@
+body {
+  background-color: #FFFFFF; }
+
 .site {
   max-width: 990px;
   width: 100%;
   margin-left: auto;
-  margin-right: auto;
-  background-color: gray; }
+  margin-right: auto; }
 
 .m-nav {
   height: 140px;
-  background-color: silver; }
+  position: relative; }
+  .m-nav .m-nav--main {
+    height: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .m-nav .m-nav--latest-news {
+    height: 40px;
+    position: relative; }
+    .m-nav .m-nav--latest-news .heading {
+      position: absolute;
+      left: 0;
+      bottom: 0; }
+    .m-nav .m-nav--latest-news .items {
+      position: absolute;
+      left: 90px;
+      bottom: 0;
+      overflow: hidden;
+      width: 66%; }
+    .m-nav .m-nav--latest-news .date {
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+    .m-nav .m-nav--latest-news .unslider-nav, .m-nav .m-nav--latest-news .unslider-arrow {
+      display: none; }
+  .m-nav .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px; }
+    .m-nav .logo img {
+      height: 100%;
+      width: auto; }
+  .m-nav .meta {
+    text-align: center; }
+  .m-nav .social {
+    position: absolute;
+    right: 0;
+    top: 0; }
 
 .m-archive {
   overflow: hidden; }
   .m-archive .sidebar.left {
     width: 100px;
-    background-color: red;
     float: left; }
   .m-archive .container {
     width: calc(100% - 100px);
-    background-color: pink;
     float: left; }
   .m-archive .above-fold {
     overflow: hidden; }
@@ -25,12 +62,10 @@
     overflow: hidden; }
     .m-archive .below-fold .wrap {
       float: left;
-      width: calc(100% - 330px);
-      background-color: yellow; }
+      width: calc(100% - 330px); }
     .m-archive .below-fold .sidebar.right {
       float: left;
-      width: 330px;
-      background-color: orange; }
+      width: 330px; }
 
 .m-home-featured {
   float: left;
@@ -38,12 +73,39 @@
 
 .m-home-carousel {
   float: left;
-  width: calc(100% - 300px); }
+  width: calc(100% - 300px);
+  position: relative;
+  height: 400px;
+  background-color: #000000; }
+  .m-home-carousel .items {
+    height: 365px; }
+    .m-home-carousel .items .item .thumb {
+      height: 300px;
+      overflow: hidden; }
+      .m-home-carousel .items .item .thumb img {
+        width: 100%;
+        height: auto; }
+    .m-home-carousel .items .item .title {
+      text-align: center;
+      font-size: 16px; }
+      .m-home-carousel .items .item .title a {
+        text-decoration: none;
+        color: #FFFFFF; }
+  .m-home-carousel ul {
+    height: 365px; }
+  .m-home-carousel .unslider-arrow {
+    color: #FFFFFF; }
 
 .m-home-spotlight .items.main .item {
   width: calc(50% - 2px);
   float: left;
-  border: 1px solid black; }
+  border: 1px solid black;
+  padding-bottom: 1000px;
+  margin-bottom: -1000px; }
+
+.m-home-category {
+  width: 50%;
+  float: left; }
 
 .m-carousel-row {
   height: 125px;

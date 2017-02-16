@@ -1,6 +1,13 @@
+//Colors
+$cn-blue: #3a4b76;
+
 //Vars
 $site-width: 990px;
 $nav-height: 140px;
+
+body {
+	background-color: #FFFFFF;
+}
 
 //Site
 .site {
@@ -8,13 +15,70 @@ $nav-height: 140px;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: gray;
 }
 
 //Nav
 .m-nav {
 	height: $nav_height;
-	background-color: silver;
+	position: relative;
+
+	.m-nav--main {
+		height: $nav_height - 80px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.m-nav--latest-news {
+		height: 40px;
+		position: relative;
+
+		.heading {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+
+		.items {
+			position: absolute;
+			left: 90px;
+			bottom: 0;
+			overflow: hidden;
+			width: 66%;	
+		}
+
+		.date {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+
+		.unslider-nav, .unslider-arrow {
+			display: none;
+		}
+	}
+
+	.logo {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 60px;
+
+		img {
+			height: 100%;
+			width: auto;
+		}
+
+	}
+
+	.meta {
+		text-align: center;
+	}
+
+	.social {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
 }
 
 //Archive Pages
@@ -23,13 +87,11 @@ $nav-height: 140px;
 
 	.sidebar.left {
 		width: 100px;
-		background-color: red;
 		float: left;
 	}
 
 	.container {
 		width: calc(100% - 100px);
-		background-color: pink;
 		float: left;
 	}
 
@@ -43,13 +105,11 @@ $nav-height: 140px;
 		.wrap {
 			float: left;
 			width: calc(100% - 330px);
-			background-color: yellow;
 		}
 
 		.sidebar.right {
 			float: left;
 			width: 330px;
-			background-color: orange;
 		}
 	}
 }
@@ -62,6 +122,43 @@ $nav-height: 140px;
 .m-home-carousel {
 	float: left;
 	width: calc(100% - 300px);
+	position: relative;
+	height: 400px;
+	background-color: #000000;
+
+	.items {
+		height: 365px;
+
+		.item {
+			.thumb {
+				height: 300px;
+				overflow: hidden;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.title {
+				text-align: center;
+				font-size: 16px;
+
+				a {
+					text-decoration: none;
+					color: #FFFFFF;
+				}
+			}
+		}
+	}
+
+	ul {
+		height: 365px;
+	}
+
+	.unslider-arrow {
+		color: #FFFFFF;
+	}
 }
 
 .m-home-spotlight {
@@ -70,8 +167,15 @@ $nav-height: 140px;
 			width: calc(50% - 2px);
 			float: left;
 			border: 1px solid black;
+			padding-bottom: 1000px;
+			margin-bottom: -1000px;
 		}
 	}
+}
+
+.m-home-category {
+	width: 50%;
+	float: left;
 }
 
 .m-carousel-row {

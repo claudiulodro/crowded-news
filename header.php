@@ -16,7 +16,7 @@
 
 		<div class="m-nav--main">
 			<div class="logo">
-				LOGO
+				<?php the_custom_logo() ?>
 			</div>
 			<div class="meta">
 				<div class="search">
@@ -45,10 +45,14 @@
 			</div>
 		</div>
 
-		<div class="m-nav--latest-news">
+		<div class="m-nav--latest-news h-latest-news">
 			<div class="heading">Latest News</div>
-			<div class="items">
-				<a class="item" href="#">Todo latest news</a>
+			<div class="items unslider">
+				<ul>
+					<?php while( have_posts() ): the_post(); ?>
+						<li><a class="item" href="<?php the_permalink() ?>"><?php the_title() ?></a></li>
+					<?php endwhile ?>
+				</ul>
 			</div>
 			<div class="date">
 				<?php echo date( 'l, F j Y' ) ?>
