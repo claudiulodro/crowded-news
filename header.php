@@ -6,7 +6,9 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
 <?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -20,7 +22,7 @@
 			</div>
 			<div class="meta">
 				<div class="search">
-					<input type="text"> [Search]
+					<?php get_search_form(); ?>
 				</div>
 				<div class="links">
 					<a href="#">Markets</a>

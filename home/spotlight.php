@@ -10,7 +10,7 @@ $count = 0;
 				<?php if ( $count > 4 ): break; endif; ?>
 				<div class="item">
 					<h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
-					<h4 class="date"><a href="<?php the_permalink() ?>"><?php the_date() ?></a></h4>
+					<h4 class="date"><a href="<?php the_permalink() ?>"><?php echo get_the_date() ?></a></h4>
 					<p class="excerpt"><a href="<?php the_permalink() ?>"><?php the_excerpt() ?></a></p>
 				</div>
 			<?php endwhile ?>
@@ -25,3 +25,4 @@ $count = 0;
 		</div>
 	</div>
 </div>
+<?php wp_reset_postdata() ?>

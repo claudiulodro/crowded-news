@@ -13,3 +13,4 @@ $carousel_query = CN_PostSections::get_carousel_query();
 		</ul>
 	</div>
 </div>
+<?php wp_reset_postdata() ?>

@@ -14,6 +14,13 @@
 		delay: 3000
 	} );
 
+	//Homepage Category Carousels
+	$( '.h-carousel-row.unslider').unslider( {
+		autoplay: true,
+		speed: 700,
+		delay: 3000
+	} );
+
 
 	console.log("Great Success!");
 

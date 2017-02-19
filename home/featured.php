@@ -6,9 +6,10 @@ $featured_query = CN_PostSections::get_featured_query();
 		<?php while ( $featured_query->have_posts() ): $featured_query->the_post(); ?>
 			<div class="item">
 				<h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
-				<h4 class="date"><a href="<?php the_permalink() ?>"><?php the_date() ?></a></h4>
+				<h4 class="date"><a href="<?php the_permalink() ?>"><?php echo get_the_date() ?></a></h4>
 				<p class="excerpt"><a href="<?php the_permalink() ?>"><?php the_excerpt() ?></a></p>
 			</div>
 		<?php endwhile ?>
 	</div>
 </div>
+<?php wp_reset_postdata() ?>

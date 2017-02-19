@@ -26,3 +26,4 @@ $category_query = new WP_Query( $args );
 		<?php endwhile ?>
 	</div>
 </div>
+<?php wp_reset_postdata() ?>

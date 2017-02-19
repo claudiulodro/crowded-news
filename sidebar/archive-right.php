@@ -1,1 +1,3 @@
-RIGHT ARCHIVE SIDEBAR
+<div class="m-archive-sidebar-right">
+
+</div>
