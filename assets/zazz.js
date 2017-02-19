@@ -18,10 +18,12 @@
 	$( '.h-carousel-row.unslider').unslider( {
 		autoplay: true,
 		speed: 700,
-		delay: 3000
+		delay: 6000, 
+		nav: false,
+		arrows: {
+			prev: '<a class="unslider-arrow prev"><i class="fa fa-chevron-circle-left"></i></a>',
+			next: '<a class="unslider-arrow next"><i class="fa fa-chevron-circle-right"></i></a>',
+		}
 	} );
-
-
-	console.log("Great Success!");
 
 } )( jQuery );

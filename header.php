@@ -24,25 +24,16 @@
 				<div class="search">
 					<?php get_search_form(); ?>
 				</div>
-				<div class="links">
-					<a href="#">Markets</a>
-					<a href="#">Weather</a>
-					<a href="#">RSS</a>
-					<a href="#">About</a>
-				</div>
 			</div>
 			<div class="social">
-				<a href="#" class="social-icon email">
-					E
-				</a>
 				<a href="#" class="social-icon facebook">
-					F
+					<i class="fa fa-facebook-square"></i>
 				</a>
 				<a href="#" class="social-icon twitter">
-					T
+					<i class="fa fa-twitter-square"></i>
 				</a>
 				<a href="#" class="social-icon rss">
-					R
+					<i class="fa fa-rss-square"></i>
 				</a>
 			</div>
 		</div>

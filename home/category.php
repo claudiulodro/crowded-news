@@ -7,11 +7,11 @@ $args = array(
 $category_query = new WP_Query( $args );
 ?>
 <div class="m-home-category">
-	<h3 class="title"><?php echo esc_attr( $category->name ) ?></h3>
+	<h3 class="title"><a href="<?php echo get_category_link( $category->term_id ) ?>"><?php echo esc_attr( $category->name ) ?></a></h3>
 	<?php if ( $category_query->have_posts() ): $category_query->the_post(); ?>
 		<div class="featured-item">
 			<div class="thumbnail">
-				<a href="<?php the_permalink() ?>">THUMB</a>
+				<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'home-category' ) ?></a>
 			</div>
 			<div class="title">
 				<a href="<?php the_permalink() ?>"><?php the_title() ?></a>

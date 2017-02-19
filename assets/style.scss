@@ -87,13 +87,30 @@ body {
 
 		.meta {
 			text-align: right;
-			margin-top: 6px;
+			margin-top: 20px;
 		}
 
 		.social {
 			position: absolute;
 			right: 0;
 			top: 0;
+
+			a {
+				margin-left: .25em;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			i {
+				font-size: 1.75em;
+				color: #000000;
+
+				&:hover {
+					color: $cn-lt-blue;
+				}
+			}
 		}
 	}
 
@@ -309,6 +326,7 @@ body {
 .m-home-homepage-categories {
 	overflow: hidden;
 	border-bottom: 1px solid $border-color;
+	margin-bottom: 2 * $margin-m;
 }
 
 .m-home-category {
@@ -324,23 +342,113 @@ body {
 		margin-left: -1px;
 	}
 
+	> .title {
+		margin: 0;
+		margin-bottom: $margin-m;
+	}
+
+	.featured-item {
+		overflow: hidden;
+		margin-bottom: $margin-m;
+
+		.thumbnail {
+			width: 60px;
+			height: 60px;
+			background-color: #000000;
+			float: left;
+			margin-right: 1em;
+		}
+
+		.title {
+			float: left;
+			width: calc(100% - 76px);
+			font-weight: bold;
+
+			a {
+				color: $cn-blue;
+			}
+		}
+	}
+
 	.items {
 		padding-bottom: 1em;
+		padding-left: 1em;
+
+		.item {
+			display: list-item;
+			color: $cn-blue;
+			margin-bottom: .5em;
+
+			a {
+				color: $cn-blue;
+			}
+		}
 	}
 }
 
 .m-home-carousel-categories {
 	position: relative;
+	margin-bottom: $margin-m;
+
+	> .unslider {
+		position: relative;
+		margin-top: -1px;
+	}
+
+	.unslider-arrow {
+		top: 1.25em;
+		color: $cn-lt-blue;
+
+		&.prev {
+			right: 50px;
+			left: auto;
+		}
+
+		&.next {
+			right: 24px;
+		}
+
+		i {
+			font-size: 1.25em;
+		}
+	}
 }
 
 .m-carousel-row {
-	height: 125px;
 	margin: 5px;
 	border: 1px solid $border-color;
 
+	> .title {
+		padding-left: $margin-m;
+		padding-right: $margin-m;
+	}
+
 	.featured-item {
+		box-sizing: border-box;
+		padding-left: 7.5px;
+		padding-right: 7.5px;
+		padding-bottom: $margin-m;
 		width: 33%;
 		float: left;
+
+		&:first-of-type {
+			padding-left: $margin-m;
+		}
+
+		&:last-of-type {
+			padding-right: $margin-m;
+		}
+
+		.title a {
+			color: $cn-blue;
+		}
+
+		.thumbnail {
+			width: 100%;
+			height: 80px;
+			background-color: #000000;
+			margin-bottom: $margin-m;
+		}
 	}
 }
 
@@ -361,4 +469,9 @@ body {
 			margin-bottom: .25em;
 		}
 	}
+}
+
+.m-footer {
+	margin-bottom: $margin-m;
+	padding-left: $margin-m;
 }

@@ -2,10 +2,8 @@
 
 function cn_enqueue_styles() {
 
-	?><link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800|Gentium+Book+Basic" rel="stylesheet">
-
-
-<?php
+	?><link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800|Gentium+Book+Basic"><?php
+	?><link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/vendor/font-awesome/css/font-awesome.min.css"><?php
 
 	wp_enqueue_style(
 		'crowded-news',

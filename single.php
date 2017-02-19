@@ -5,7 +5,6 @@
 
 				<?php the_title() ?>
 				<?php the_content() ?>L
-				<?php comments_template( '', true ); ?>
 
 			<?php endwhile; ?>
 
