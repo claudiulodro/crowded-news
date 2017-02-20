@@ -5,7 +5,7 @@ $args = array(
 );
 
 $category_query = new WP_Query( $args );
-$carousel_unslider_class = $category_query->found_posts > 3 ? 'unslider' : '';
+$carousel_unslider_class = $category_query->found_posts > 3 ? 'h-unslider' : '';
 $current = 0;
 ?>
 <div class="m-carousel-row h-carousel-row <?php echo $carousel_unslider_class ?>">

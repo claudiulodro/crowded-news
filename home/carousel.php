@@ -2,7 +2,7 @@
 $carousel_query = CN_PostSections::get_carousel_query();
 ?>
 <div class="m-home-carousel h-home-carousel">
-	<div class="items unslider">
+	<div class="items h-unslider">
 		<ul>
 			<?php while ( $carousel_query->have_posts() ): $carousel_query->the_post(); ?>
 				<li class="item">

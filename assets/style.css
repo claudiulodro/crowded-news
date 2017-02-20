@@ -1,6 +1,6 @@
 body {
   background-color: #FFFFFF;
-  font-family: 'Gentium Book Basic', serif; }
+  font-family: "Gentium Book Basic", serif; }
   body a {
     text-decoration: none;
     color: #000000; }
@@ -8,13 +8,14 @@ body {
       text-decoration: underline; }
   body h1, body h2, body h3, body h4 {
     color: #3a4b76;
-    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: "Alegreya Sans SC", sans-serif;
     text-transform: uppercase; }
     body h1 a, body h2 a, body h3 a, body h4 a {
       color: #3a4b76; }
 
 .site {
   max-width: 1200px;
+  min-width: 1040px;
   width: 100%;
   margin-left: auto;
   margin-right: auto; }
@@ -249,7 +250,8 @@ body {
 
 .m-carousel-row {
   margin: 5px;
-  border: 1px solid #3a4b76; }
+  border: 1px solid #3a4b76;
+  overflow: hidden; }
   .m-carousel-row > .title {
     padding-left: 15px;
     padding-right: 15px; }
@@ -272,20 +274,95 @@ body {
       background-color: #000000;
       margin-bottom: 15px; }
 
-.m-archive-sidebar-right .wp-tag-cloud {
+.m-archive-sidebar-left .wp-tag-cloud {
   padding-left: .5em;
   margin-top: .25em;
   margin-bottom: .25em;
   overflow: hidden;
-  list-style: none;
+  display: block;
   word-wrap: break-word; }
-  .m-archive-sidebar-right .wp-tag-cloud a {
+  .m-archive-sidebar-left .wp-tag-cloud a {
     color: #3a4b76; }
-  .m-archive-sidebar-right .wp-tag-cloud li {
+  .m-archive-sidebar-left .wp-tag-cloud li {
     margin-bottom: .25em; }
 
 .m-footer {
   margin-bottom: 15px;
   padding-left: 15px; }
+
+@media (max-width: 800px) {
+  .site {
+    min-width: 100%; }
+
+  .m-archive .sidebar {
+    display: none; }
+  .m-archive .container {
+    width: 100%; }
+  .m-archive .wrap {
+    width: 100%; }
+
+  .m-home-spotlight .items.main .item {
+    width: 100% !important;
+    margin: 0 !important;
+    margin-top: -1px !important;
+    padding-bottom: 15px !important;
+    border: 1px solid #3a4b76; }
+
+  .m-carousel-row .featured-item {
+    width: 100%;
+    padding-left: 15px !important; }
+    .m-carousel-row .featured-item .thumbnail {
+      width: 60px;
+      height: 60px;
+      float: left;
+      margin-right: 20px; }
+    .m-carousel-row .featured-item .title {
+      float: left;
+      width: calc(100% - 80px); }
+  .m-carousel-row li {
+    display: block !important; }
+  .m-carousel-row ul {
+    padding: 0 !important; }
+
+  .m-home-category {
+    width: 100% !important;
+    padding-bottom: 1em;
+    margin: 0 !important;
+    margin-bottom: -1px !important; }
+
+  .m-nav {
+    height: auto;
+    margin-bottom: 15px; }
+    .m-nav .search {
+      display: none; }
+
+  .m-nav--latest-news {
+    height: auto !important;
+    padding: 1em !important;
+    margin-bottom: 30px; }
+    .m-nav--latest-news .heading {
+      font-size: 18px;
+      font-family: "Alegreya Sans SC", sans-serif;
+      color: #3a4b76;
+      position: relative !important;
+      left: auto !important;
+      bottom: auto !important; }
+    .m-nav--latest-news .items {
+      position: relative !important;
+      left: auto !important;
+      bottom: auto !important;
+      width: 100% !important; }
+      .m-nav--latest-news .items ul {
+        padding-left: 1em;
+        color: #3a4b76;
+        margin-bottom: 0 !important; }
+      .m-nav--latest-news .items li {
+        margin-bottom: 1em !important; }
+        .m-nav--latest-news .items li:last-of-type {
+          margin-bottom: 0 !important; }
+        .m-nav--latest-news .items li a {
+          color: #3a4b76; }
+    .m-nav--latest-news .date {
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */

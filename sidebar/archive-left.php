@@ -6,7 +6,7 @@ $args = array(
 );
 ?>
 
-<div class="m-archive-sidebar-right">
+<div class="m-archive-sidebar-left">
 	<div class="tag-cloud">
 		<?php wp_tag_cloud( $args ) ?>
 	</div>
