@@ -1,24 +1,4 @@
-//Colors
-$cn-blue: #3a4b76;
-$cn-gray: #818181;
-$cn-lt-blue: lighten($cn-blue,20%);
-
-//Vars
-$site-width: 1200px;
-$nav-height: 127px;
-$margin-m: 15px;
-
-$text-color: #000000;
-$border-color: $cn-blue;
-
-$text-font: 'Gentium Book Basic', serif;
-$heading-font: 'Alegreya Sans SC', sans-serif;
-
-$font-xl: 20px;
-$font-l: 18px;
-$font-m: 16px;
-$font-s: 14px;
-$font-xs: 12px;
+@import 'variables';
 
 body {
 	background-color: #FFFFFF;
@@ -181,6 +161,28 @@ body {
 	.container {
 		width: calc(100% - 100px);
 		float: left;
+	}
+
+	&.archive {
+		.heading {
+			margin-left: $margin-m;
+		}
+
+		.results {
+			ul {
+				padding-left: 2em;
+				padding-right: 2em;
+
+				li {
+					margin-bottom: 1em;
+					color: $cn-blue;
+
+					a {
+						color: $cn-blue;
+					}
+				}
+			}
+		}
 	}
 }
 

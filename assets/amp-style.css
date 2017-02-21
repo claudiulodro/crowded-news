@@ -1,0 +1,47 @@
+body {
+  background-color: #FFFFFF; }
+
+.site {
+  max-width: 680px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box; }
+
+.m-nav {
+  height: 75px;
+  padding-top: 30px;
+  border-bottom: 1px solid #3a4b76; }
+  .m-nav .logo {
+    display: block;
+    width: 150px; }
+    .m-nav .logo .amp-image {
+      width: 100%; }
+
+.m-single .title {
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #3a4b76; }
+.m-single .thumbnail {
+  margin-bottom: 30px; }
+.m-single .byline {
+  color: #818181;
+  margin-bottom: 15px; }
+  .m-single .byline a {
+    color: #818181; }
+.m-single .social {
+  margin-bottom: 30px; }
+.m-single .content {
+  font-size: 18px;
+  font-family: "Gentium Book Basic", serif; }
+
+.m-footer .home {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 3px solid #3a4b76;
+  width: 63px;
+  padding: 5px;
+  padding-top: 8px; }
+
+/*# sourceMappingURL=amp-style.css.map */

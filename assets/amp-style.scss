@@ -1,0 +1,70 @@
+@import 'variables';
+
+body {
+	background-color: #FFFFFF;
+}
+
+.site {
+	max-width: $content-width;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+
+.m-nav {
+	height: 75px;
+	padding-top: 2 * $margin-m;
+	border-bottom: 1px solid $cn-blue;
+
+	.logo {
+		display: block;
+		width: 150px;
+
+		.amp-image {
+			width: 100%
+		}
+	}
+}
+
+.m-single {
+	.title {
+		font-family: $heading-font;
+		color: $cn-blue;
+	}
+
+	.thumbnail {
+		margin-bottom: 2 * $margin-m;
+	}
+
+	.byline {
+		color: $cn-gray;
+		margin-bottom: $margin-m;
+
+		a {
+			color: $cn-gray;
+		}
+	}
+
+	.social {
+		margin-bottom: 2 * $margin-m;
+	}
+
+	.content {
+		font-size: $font-l;
+		font-family: $text-font;
+	}
+}
+
+.m-footer {
+	.home {
+		margin-top: 2 * $margin-m;
+		margin-bottom: 2 * $margin-m;
+		border: 3px solid $cn-blue;
+		width: 63px;
+		padding: 5px;
+		padding-top: 8px;
+	}
+}

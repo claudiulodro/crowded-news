@@ -99,6 +99,16 @@ body {
   .m-archive .container {
     width: calc(100% - 100px);
     float: left; }
+  .m-archive.archive .heading {
+    margin-left: 15px; }
+  .m-archive.archive .results ul {
+    padding-left: 2em;
+    padding-right: 2em; }
+    .m-archive.archive .results ul li {
+      margin-bottom: 1em;
+      color: #3a4b76; }
+      .m-archive.archive .results ul li a {
+        color: #3a4b76; }
 
 .m-home-featured .item {
   border: 1px solid #3a4b76;
