@@ -35,6 +35,10 @@ body {
 .m-single .content {
   font-size: 18px;
   font-family: "Gentium Book Basic", serif; }
+  .m-single .content a {
+    color: #637ab3; }
+  .m-single .content .pagination a {
+    margin-right: 1em; }
 
 .m-footer .home {
   margin-top: 30px;

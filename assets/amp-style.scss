@@ -55,6 +55,16 @@ body {
 	.content {
 		font-size: $font-l;
 		font-family: $text-font;
+
+		a {
+			color: $cn-lt-blue;
+		}
+
+		.pagination {
+			a {
+				margin-right: 1em;
+			}
+		}
 	}
 }
 

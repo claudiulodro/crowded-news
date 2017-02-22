@@ -1,9 +1,10 @@
+<?php global $page ?>
 <?php get_header( 'single' ); ?>
 
 <div class="m-single">
 	<div class="wrap">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php $thumb_id = get_post_thumbnail_id() ?>
+			<?php $thumb_id = 1 == $page ? get_post_thumbnail_id() : false ?>
 			<?php $thumb = $thumb_id ? cn_get_amp_image( $thumb_id, 'amp-featured', true ) : "" ?>
 			<h1 class="title"><?php the_title() ?></h1>
 
@@ -18,6 +19,12 @@
 
 			<div class="content">
 				<?php the_content() ?>
+				<div class="pagination">
+					<?php wp_link_pages( array(
+						'before' => '',
+						'next_or_number' => 'next'
+					) ) ?>
+				</div>
 			</div>
 
 			<div class="byline">

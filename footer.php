@@ -1,16 +1,5 @@
 	<div class="m-footer">
-		<div class="categories">
-			<a href="#">Todo</a> | 
-			<a href="#">Todo</a> | 
-			<a href="#">Todo</a> | 
-			<a href="#">Todo</a> 
-		</div>
-		<div class="info">
-			<a href="#">Todo</a> | 
-			<a href="#">Todo</a> | 
-			<a href="#">Todo</a> | 
-			<a href="#">Todo</a> 
-		</div>
+		<?php wp_nav_menu( array( 'theme_location' => 'cn-footer-menu' ) ); ?>
 	</div>
 </div>
 <?php wp_footer(); ?>

@@ -18,6 +18,11 @@ register_sidebar( array(
 	'after_widget' => '</div>'
 ) );
 
+function cn_register_nav_menu() {
+	register_nav_menu( 'cn-footer-menu', 'Footer' );
+}
+add_action( 'init', 'cn_register_nav_menu' );
+
 function cn_excerpt_length( $length ) {
     return 30;
 }

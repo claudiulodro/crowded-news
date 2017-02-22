@@ -15,7 +15,7 @@
 		</ul>
 	</div>
 
-	<div class="pagination">NEXT PREV</div>
+	<div class="pagination"><?php posts_nav_link(); ?></div>
 </div>
 
 <?php get_footer(); ?>
