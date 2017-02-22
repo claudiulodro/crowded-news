@@ -1,3 +1,1 @@
-	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-			<?php dynamic_sidebar( 'sidebar-1' ); ?>
-	<?php endif; ?>
+<?php dynamic_sidebar( 'cn-homepage' ); ?>

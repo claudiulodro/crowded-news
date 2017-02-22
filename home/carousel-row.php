@@ -17,8 +17,8 @@ $current = 0;
 				</li><li>
 			<?php endif ?>
 			<div class="featured-item">
-				<div class="thumbnail">
-					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'home-category-carousel' ) ?></a>
+				<div class="thumbnail" style="background:url('<?php the_post_thumbnail_url( get_the_ID(), 'home-category-carousel' ) ?>') no-repeat center">
+					<a href="<?php the_permalink() ?>"></a>
 				</div>
 				<div class="title">
 					<a href="<?php the_permalink() ?>"><?php the_title() ?></a>

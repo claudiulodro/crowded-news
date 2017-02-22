@@ -38,18 +38,20 @@
 			</div>
 		</div>
 
-		<div class="m-nav--latest-news h-latest-news">
-			<div class="heading">Latest News</div>
-			<div class="items h-unslider">
-				<ul>
-					<?php while( have_posts() ): the_post(); ?>
-						<li><a class="item" href="<?php the_permalink() ?>"><?php the_title() ?></a></li>
-					<?php endwhile ?>
-				</ul>
+		<?php if ( is_home() ): ?>
+			<div class="m-nav--latest-news h-latest-news">
+				<div class="heading">Latest News</div>
+				<div class="items h-unslider">
+					<ul>
+						<?php while( have_posts() ): the_post(); ?>
+							<li><a class="item" href="<?php the_permalink() ?>"><?php the_title() ?></a></li>
+						<?php endwhile ?>
+					</ul>
+				</div>
+				<div class="date">
+					<?php echo date( 'l, F j Y' ) ?>
+				</div>
 			</div>
-			<div class="date">
-				<?php echo date( 'l, F j Y' ) ?>
-			</div>
-		</div>
+		<?php endif ?>
 
 	</div>
