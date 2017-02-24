@@ -30,7 +30,7 @@ body {
 }
 
 .m-single {
-	.title {
+	.title, h1, h2, h3, h4 {
 		font-family: $heading-font;
 		color: $cn-blue;
 	}
@@ -50,6 +50,16 @@ body {
 
 	.social {
 		margin-bottom: 2 * $margin-m;
+	}
+
+	.caption {
+		font-size: $font-s;
+		color: $cn-gray;
+		margin-top: -.5em;
+
+		a {
+			color: $cn-gray;
+		}
 	}
 
 	.content {

@@ -26,13 +26,19 @@
 				</div>
 			</div>
 			<div class="social">
-				<a href="#" class="social-icon facebook">
-					<i class="fa fa-facebook-square"></i>
-				</a>
-				<a href="#" class="social-icon twitter">
-					<i class="fa fa-twitter-square"></i>
-				</a>
-				<a href="#" class="social-icon rss">
+				<?php if ( $fb_url = CN_Settings::get_facebook_page_url() ): ?>
+					<a target="_blank" href="<?php echo $fb_url ?>" class="social-icon facebook">
+						<i class="fa fa-facebook-square"></i>
+					</a>
+				<?php endif ?>
+
+				<?php if ( $twitter_url = CN_Settings::get_twitter_url() ): ?>
+					<a target="_blank" href="<?php echo $twitter_url ?>" class="social-icon twitter">
+						<i class="fa fa-twitter-square"></i>
+					</a>
+				<?php endif ?>
+
+				<a target="_blank" href="<?php echo site_url( '/feed/' ) ?>" class="social-icon rss">
 					<i class="fa fa-rss-square"></i>
 				</a>
 			</div>

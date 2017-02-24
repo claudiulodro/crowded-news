@@ -20,7 +20,7 @@ body {
     .m-nav .logo .amp-image {
       width: 100%; }
 
-.m-single .title {
+.m-single .title, .m-single h1, .m-single h2, .m-single h3, .m-single h4 {
   font-family: "Alegreya Sans SC", sans-serif;
   color: #3a4b76; }
 .m-single .thumbnail {
@@ -32,6 +32,12 @@ body {
     color: #818181; }
 .m-single .social {
   margin-bottom: 30px; }
+.m-single .caption {
+  font-size: 14px;
+  color: #818181;
+  margin-top: -.5em; }
+  .m-single .caption a {
+    color: #818181; }
 .m-single .content {
   font-size: 18px;
   font-family: "Gentium Book Basic", serif; }

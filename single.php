@@ -13,8 +13,8 @@
 			<?php endif ?>
 
 			<div class="social">
-				<a href="#" class="social-icon facebook"><amp-img src="<?php echo get_template_directory_uri() ?>/assets/facebook-icon.png" width="40" height="40"></a>
-				<a href="#" class="social-icon twitter"><amp-img src="<?php echo get_template_directory_uri() ?>/assets/twitter-icon.png" width="40" height="40"></a>
+				<a target="_blank" href="<?php cn_the_facebook_share_url() ?>" class="social-icon facebook"><amp-img src="<?php echo get_template_directory_uri() ?>/assets/facebook-icon.png" width="40" height="40"></a>
+				<a target="_blank" href="<?php cn_the_twitter_share_url() ?>" class="social-icon twitter"><amp-img src="<?php echo get_template_directory_uri() ?>/assets/twitter-icon.png" width="40" height="40"></a>
 			</div>
 
 			<div class="content">
