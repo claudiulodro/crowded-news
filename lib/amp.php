@@ -29,7 +29,7 @@ function cn_get_amp_image( $id, $size = 'thumbnail', $responsive = false ) {
  * @param $responsive - bool - responsive image or no
  **/
 function cn_the_amp_image( $id, $size = 'thumbnail', $responsive = false ) {
-	echo cn_get_amp_image( $id, $sizem, $responsive );
+	echo cn_get_amp_image( $id, $size, $responsive );
 }
 
 /**
