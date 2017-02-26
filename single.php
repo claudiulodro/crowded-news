@@ -6,10 +6,14 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php $thumb_id = 1 == $page ? get_post_thumbnail_id() : false ?>
 			<?php $thumb = $thumb_id ? cn_get_amp_image( $thumb_id, 'amp-featured', true ) : "" ?>
+			<?php $caption = $thumb_id ? get_post_field( 'post_excerpt', $thumb_id ) : "" ?>
 			<h1 class="title"><?php the_title() ?></h1>
 
-			<?php if ( $thumb ): ?>
+			<?php if ( $thumb ) : ?>
 				<div class="thumbnail"><?php echo $thumb ?></div>
+				<?php if ( $caption ) : ?>
+					<div class="header-caption"><?php echo wp_kses_post( $caption ) ?></div>
+				<?php endif ?>
 			<?php endif ?>
 
 			<div class="social">

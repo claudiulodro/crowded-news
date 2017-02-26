@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Get AMPHTML for an attachment image
+ * @param $id - int - attachment id
+ * @param $size - string/array - valid image size
+ * @param $responsive - bool - responsive image or no
+ * @return string - AMPHTML
+ **/
 function cn_get_amp_image( $id, $size = 'thumbnail', $responsive = false ) {
 	$image_data = wp_get_attachment_image_src( $id, $size );
 	if ( ! $image_data ) {
@@ -15,18 +22,21 @@ function cn_get_amp_image( $id, $size = 'thumbnail', $responsive = false ) {
 	return ob_get_clean();
 }
 
-function cn_the_amp_image( $id, $size = 'thumbnail' ) {
-	echo cn_get_amp_image( $id, $size );
+/**
+ * Output AMPHTML for an attachment image
+ * @param $id - int - attachment id
+ * @param $size - string/array - valid image size
+ * @param $responsive - bool - responsive image or no
+ **/
+function cn_the_amp_image( $id, $size = 'thumbnail', $responsive = false ) {
+	echo cn_get_amp_image( $id, $sizem, $responsive );
 }
 
-function cn_get_amp_content( $post_id = null ) {
-	return get_the_content( $post_id );
-}
-
-function cn_the_amp_content( $post_id = null ) {
-	echo cn_get_amp_content( $post_id );
-}
-
+/**
+ * Converts images into a format easily convertable to AMPHTML
+ * @params image_send_to_editor filter params
+ * @return modified image HTML
+ **/
 function cn_auto_amp_content_image_data( $html, $id, $caption, $title, $align, $url, $size ) {
 	$image_data = wp_get_attachment_image_src( $id, $size );
 	$caption = ! empty( $caption ) ? '<div class="caption">' . sanitize_text_field( $caption ) . '</div>' : "";
@@ -35,6 +45,11 @@ function cn_auto_amp_content_image_data( $html, $id, $caption, $title, $align, $
 }
 add_filter( 'image_send_to_editor', 'cn_auto_amp_content_image_data', 10, 7 );
 
+/**
+ * Convert images in the content to AMPHTML
+ * @param $content - string - post content
+ * @return string - modified content
+ **/
 function cn_auto_amp_content_images( $content ) {
 	$image_capture_regex = "#(<img)(.*?)(\/>)#";
 	$image_capture_replacement = '<amp-img$2layout="responsive"></amp-img>';
@@ -47,6 +62,9 @@ function cn_auto_amp_content_images( $content ) {
 }
 add_filter( 'the_content', 'cn_auto_amp_content_images' );
 
+/**
+ * Output structured data for the current post
+ **/
 function cn_amp_structured_data() {
 	$post_thumbnail_id = get_post_thumbnail_id();
 	$image = $post_thumbnail_id ? wp_get_attachment_image_src( $post_thumbnail_id, 'full' ) : false;

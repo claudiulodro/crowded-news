@@ -1,6 +1,9 @@
 <?php
 
-function cn_enqueue_styles() {
+/**
+ * Enqueue the styles and scripts
+ **/
+function cn_enqueue_assets() {
 
 	?><link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800|Gentium+Book+Basic"><?php
 	?><link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/vendor/font-awesome/css/font-awesome.min.css"><?php
@@ -39,4 +42,4 @@ function cn_enqueue_styles() {
 		true
 	);
 }
-add_action( 'wp_enqueue_scripts', 'cn_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'cn_enqueue_assets' );

@@ -1,17 +1,27 @@
-//Colors
+/**
+ * Colors
+ **/
 $cn-blue: #3a4b76;
 $cn-gray: #818181;
 $cn-lt-blue: lighten($cn-blue,20%);
 
-//Vars
+/**
+ * Measurements
+ **/
 $site-width: 1200px;
 $content-width: 680px;
 $nav-height: 127px;
 $margin-m: 15px;
 
+/**
+ * Defaults
+ **/
 $text-color: #000000;
 $border-color: $cn-blue;
 
+/**
+ * Fonts
+ **/
 $text-font: 'Gentium Book Basic', serif;
 $heading-font: 'Alegreya Sans SC', sans-serif;
 

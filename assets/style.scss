@@ -24,7 +24,6 @@ body {
 	}
 }
 
-//Site
 .site {
 	max-width: $site-width;
 	min-width: 1040px;
@@ -33,7 +32,9 @@ body {
 	margin-right: auto;
 }
 
-//Nav
+/**
+ * Nav bar
+ **/
 .m-nav {
 	height: $nav_height;
 	position: relative;
@@ -135,7 +136,9 @@ body {
 	}
 }
 
-//Archive Pages
+/**
+ * Archive pages (Home, Category, Search, Etc.)
+ **/
 .m-archive {
 	overflow: hidden;
 
@@ -163,6 +166,7 @@ body {
 		float: left;
 	}
 
+	// Tag, Category, etc.
 	&.archive {
 		.heading {
 			margin-left: $margin-m;
@@ -185,6 +189,7 @@ body {
 		}
 	}
 
+	// Search Results
 	&.search {
 		.nothing-found {
 			margin-left: $margin-m;
@@ -203,10 +208,16 @@ body {
 	}
 }
 
+/**
+ * Homepage right sidebar
+ **/
 .m-archive-sidebar-right {
 	margin-top: $margin-m;
 }
 
+/**
+ * Sidebar widgets
+ **/
 .m-sidebar-widget {
 	padding: $margin-m;
 	margin-bottom: $margin-m;
@@ -230,6 +241,9 @@ body {
 	}
 }
 
+/**
+ * Top-right homepage featured items
+ **/
 .m-home-featured {
 	.item {
 		border: 1px solid $border-color;
@@ -262,6 +276,9 @@ body {
 	}
 }
 
+/**
+ * Top homepage carousel
+ **/
 .m-home-carousel {
 	width: 100%;
 	margin-bottom: 2*$margin-m;
@@ -308,6 +325,9 @@ body {
 	}
 }
 
+/**
+ * Homepage below-carousel feature area
+ **/
 .m-home-spotlight {
 	margin-bottom: $margin-m;
 
@@ -378,12 +398,18 @@ body {
 	}
 }
 
+/**
+ * Homepage categories container
+ **/
 .m-home-homepage-categories {
 	overflow: hidden;
 	border-bottom: 1px solid $border-color;
 	margin-bottom: 2 * $margin-m;
 }
 
+/**
+ * Homepage category block
+ **/
 .m-home-category {
 	width: calc(50% - 2px);
 	float: left;
@@ -441,6 +467,9 @@ body {
 	}
 }
 
+/**
+ * Homepage category carousel galleries container
+ **/
 .m-home-carousel-categories {
 	position: relative;
 	margin-bottom: $margin-m;
@@ -469,6 +498,9 @@ body {
 	}
 }
 
+/**
+ * Homepage category carousel
+ **/
 .m-carousel-row {
 	margin: 5px;
 	border: 1px solid $border-color;
@@ -516,6 +548,9 @@ body {
 	}
 }
 
+/**
+ * Homepage left-sidebar tag list
+ **/
 .m-archive-sidebar-left {
 	.wp-tag-cloud {
 		padding-left: .5em;
@@ -535,6 +570,9 @@ body {
 	}
 }
 
+/**
+ * Footer
+ **/
 .m-footer {
 	margin-bottom: 2 * $margin-m;
 	text-align: center;
@@ -561,7 +599,9 @@ body {
 	}
 }
 
-//Mobile
+/**
+ * Mobile UI tweaks
+ **/
 @media (max-width: 800px) {
 	.site {
 		min-width: 100%;
@@ -698,4 +738,3 @@ body {
 		}
 	}
 }
-

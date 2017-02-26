@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Get the Facebook share url for a post
+ * @param $post_id - int - optional post id to fetch URL for
+ * @return string
+ **/
 function cn_get_facebook_share_url( $post_id = null ) {
 	if ( ! $post_id ) {
 		$post_id = get_the_ID();
@@ -10,10 +15,19 @@ function cn_get_facebook_share_url( $post_id = null ) {
 	return "https://www.facebook.com/sharer/sharer.php?u=" . urlencode( $link );
 }
 
+/**
+ * Output the Facebook share url for a post
+ * @param $post_id - int - optional post id to fetch URL for
+ **/
 function cn_the_facebook_share_url( $post_id = null ) {
 	echo cn_get_facebook_share_url( $post_id );
 }
 
+/**
+ * Get the Twitter share url for a post
+ * @param $post_id - int - optional post id to fetch URL for
+ * @return string
+ **/
 function cn_get_twitter_share_url( $post_id = null ) {
 	if ( ! $post_id ) {
 		$post_id = get_the_ID();
@@ -24,16 +38,26 @@ function cn_get_twitter_share_url( $post_id = null ) {
 	return "https://twitter.com/home?status=" . urlencode( $link );
 }
 
+/**
+ * Output the Twitter share url for a post
+ * @param $post_id - int - optional post id to fetch URL for
+ **/
 function cn_the_twitter_share_url( $post_id = null ) {
 	echo cn_get_twitter_share_url( $post_id );
 }
 
+/**
+ * Manages general theme settings
+ **/
 class CN_Settings {
 	const OPTION_FACEBOOK_URL = 'cn_facebook_page_url';
 	const OPTION_TWITTER_URL = 'cn_twitter_url';
 	const OPTION_GA_ID = 'cn_google_analytics_id';
 	const OPTION_GTM_ID = 'cn_gtm_id';
 
+	/**
+	 * Render a Google Tag Manager snippet if GTM ID is set
+	 **/
 	public static function render_gtm_snippet() {
 		$id = get_option( CN_Settings::OPTION_GTM_ID, false );
 		if ( ! $id ) {
@@ -48,6 +72,9 @@ class CN_Settings {
 		<?php
 	}
 
+	/**
+	 * Render an AMP Google Analytics snippet if GA ID is set
+	 **/
 	public static function render_amp_ga_snippet() {
 		$id = get_option( CN_Settings::OPTION_GA_ID, false );
 		if ( ! $id ) {
@@ -72,10 +99,18 @@ class CN_Settings {
 		<?php
 	}
 
+	/**
+	 * Get the site Facebook page URL
+	 * @return string
+	 **/
 	public static function get_facebook_page_url() {
 		return esc_url( get_option( CN_Settings::OPTION_FACEBOOK_URL, "" ) );
 	}
 
+	/**
+	 * Get the site Twitter page URL
+	 * @return string
+	 **/
 	public static function get_twitter_url() {
 		return esc_url( get_option( CN_Settings::OPTION_TWITTER_URL, "" ) );
 	}

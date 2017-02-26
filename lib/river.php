@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Manages the different sections posts are displayed in on the homepage
+ **/
 class CN_PostSections {
 
 	const META_CAROUSEL = 'cn_include_carousel';
@@ -10,18 +13,40 @@ class CN_PostSections {
 	const SIZE_FEATURED = 2;
 	const SIZE_SPOTLIGHT = 10;
 
+	/**
+	 * Get the query for the homepage featured carousel
+	 * @param $category_id - int - optional results category
+	 * @return WP_Query
+	 **/
 	public static function get_carousel_query( $category_id = 0 ) {
 		return CN_PostSections::get_checked_meta_query( CN_PostSections::META_CAROUSEL, CN_PostSections::SIZE_CAROUSEL, $category_id );
 	}
 
+	/**
+	 * Get the query for the homepage featured area
+	 * @param $category_id - int - optional results category
+	 * @return WP_Query
+	 **/
 	public static function get_featured_query( $category_id = 0 ) {
 		return CN_PostSections::get_checked_meta_query( CN_PostSections::META_FEATURED, CN_PostSections::SIZE_FEATURED, $category_id );
 	}
 
+	/**
+	 * Get the query for the homepage spotlight area
+	 * @param $category_id - int - optional results category
+	 * @return WP_Query
+	 **/
 	public static function get_spotlight_query( $category_id = 0 ) {
 		return CN_PostSections::get_checked_meta_query( CN_PostSections::META_SPOTLIGHT, CN_PostSections::SIZE_SPOTLIGHT, $category_id );
 	}
 
+	/**
+	 * Get a query for a generic boolean post meta data
+	 * @param $meta_key - string - post meta key to match on
+	 * @param $posts_per_page - int - max # of posts to get
+	 * @param $category_id - int - optional results category
+	 * @return WP_Query
+	 **/
 	public static function get_checked_meta_query( $meta_key, $posts_per_page, $category_id = 0 ) {
 		$args = array(
 			'posts_per_page' => $posts_per_page,
@@ -99,6 +124,9 @@ class CN_PostSections {
 }
 new CN_PostSections();
 
+/**
+ * Manages the different sections categories are displayed in on the homepage
+ **/
 class CN_CategorySections {
 
 	const META_CAROUSEL = 'cn_include_category_carousel';
@@ -109,14 +137,27 @@ class CN_CategorySections {
 		add_action( 'edited_category', array( $this, 'save_metabox' ) );
 	}
 
+	/**
+	 * Get the categories for the homepage category carousels area
+	 * @return array - terms
+	 **/
 	public static function get_carousel_categories() {
 		return CN_CategorySections::get_checked_meta_terms( CN_CategorySections::META_CAROUSEL );
 	}
 
+	/**
+	 * Get the categories for the homepage category area
+	 * @return array - terms
+	 **/
 	public static function get_homepage_categories() {
 		return CN_CategorySections::get_checked_meta_terms( CN_CategorySections::META_HOMEPAGE );
 	}
 
+	/**
+	 * Get the categories with a boolean meta value
+	 * @param $meta_key - string - meta key to match on
+	 * @return array - terms
+	 **/
 	public static function get_checked_meta_terms( $meta_key ) {
 		$args = array(
 			'meta_query' => array(
