@@ -1,5 +1,7 @@
 <?php
 
+define( 'CN_VERSION', '0.9.0' );
+
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-logo' );
 
@@ -28,4 +30,11 @@ function cn_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'cn_excerpt_length' );
 
+function cn_get_version() {
+	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+		return rand();
+	}
+
+	return CN_VERSION;
+}
 require 'lib/include.php';

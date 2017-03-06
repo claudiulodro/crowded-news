@@ -79,7 +79,7 @@ class CN_Settings {
 	 **/
 	public static function render_amp_ga_snippet() {
 		$id = get_option( CN_Settings::OPTION_GA_ID, false );
-		if ( ! $id ) {
+		if ( ! $id || is_preview() ) {
 			return;
 		}
 		?>

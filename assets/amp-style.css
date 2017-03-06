@@ -48,6 +48,8 @@ body {
   margin-bottom: 15px; }
   .m-single .byline a {
     color: #818181; }
+  .m-single .byline .author {
+    display: block; }
 .m-single .social {
   margin-bottom: 30px; }
 .m-single .caption, .m-single .header-caption {

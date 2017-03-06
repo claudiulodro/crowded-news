@@ -12,7 +12,7 @@ function cn_enqueue_assets() {
 		'crowded-news',
 		get_template_directory_uri().'/assets/style.css',
 		array(),
-		rand()
+		cn_get_version()
 	);
 	wp_enqueue_style(
 		'jquery-unslider',
@@ -38,7 +38,7 @@ function cn_enqueue_assets() {
 		'cn-zazz',
 		get_template_directory_uri().'/assets/zazz.js',
 		array( 'jquery', 'jquery-unslider' ),
-		rand(),
+		cn_get_version(),
 		true
 	);
 }

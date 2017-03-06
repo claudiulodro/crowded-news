@@ -33,6 +33,8 @@
 
 			<div class="byline">
 				<span class="date">Published <?php the_date() ?></span> in <span class="categories"><?php the_category( ', ' ) ?></span>
+				<div class="author">By <?php the_author_posts_link() ?></div>
+				<div class="site-title"><a href="<?php site_url() ?>"><?php bloginfo( 'name' ) ?></a></div>
 			</div>
 		<?php endwhile; ?>
 	</div>

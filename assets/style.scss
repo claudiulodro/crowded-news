@@ -213,6 +213,13 @@ body {
  **/
 .m-archive-sidebar-right {
 	margin-top: $margin-m;
+
+	.widget_recent_entries {
+		li:nth-of-type(n+6) {
+			display: none;
+		}
+	}
+
 }
 
 /**
@@ -612,8 +619,13 @@ body {
 	}
 
 	.m-archive {
-		.sidebar {
+		.sidebar.left {
 			display: none;
+		}
+
+		.sidebar.right {
+			float: none;
+			width: 100%;
 		}
 
 		.container {
@@ -621,60 +633,8 @@ body {
 		}
 
 		.wrap {
-			width: 100%;
+			display: none;
 		}
-	}
-
-	.m-archive-sidebar-right {
-		display: none;
-	}
-
-	.m-home-spotlight {
-		.items {
-			&.main {
-				.item {
-					width: 100%!important;
-					margin: 0!important;
-					margin-top: -1px!important;
-					padding-bottom: $margin-m!important;
-					border: 1px solid $border-color;
-				}
-			}
-		}
-	}
-
-	.m-carousel-row {
-		.featured-item {
-			width: 100%;
-			padding-left: $margin-m!important;
-
-			.thumbnail {
-				width: 60px;
-				height: 60px;
-				float: left;
-				margin-right: 20px;
-			}
-
-			.title {
-				float: left;
-				width: calc(100% - 80px);
-			}
-		}
-
-		li {
-			display: block!important;
-		}
-
-		ul {
-			padding: 0!important;
-		}
-	}
-
-	.m-home-category {
-		width: 100%!important;
-		padding-bottom: 1em;
-		margin: 0!important;
-		margin-bottom: -1px!important;
 	}
 
 	.m-nav {
@@ -687,47 +647,7 @@ body {
 	}
 
 	.m-nav--latest-news {
-		height: auto!important;
-		padding: 1em!important;
-		margin-bottom: 2 * $margin-m;
-
-		.heading {
-			font-size: $font-l;
-			font-family: $heading-font;
-			color: $cn-blue;
-			position: relative!important;
-			left: auto!important;
-			bottom: auto!important;
-		}
-
-		.items {
-			position: relative!important;
-			left: auto!important;
-			bottom: auto!important;
-			width: 100%!important;
-
-			ul {
-				padding-left: 1em;
-				color: $cn-blue;
-				margin-bottom: 0!important;
-			}
-
-			li {
-				margin-bottom: 1em!important;
-
-				&:last-of-type {
-					margin-bottom: 0!important;
-				}
-
-				a {
-					color: $cn-blue;
-				}
-			}
-		}
-
-		.date {
-			display: none;
-		}
+		display: none;
 	}
 
 	.m-footer {
@@ -739,6 +659,12 @@ body {
 			border: none!important;
 			margin: 1em!important;
 			padding: 0!important;
+		}
+	}
+
+	.widget_recent_entries {
+		li {
+			display: list-item!important;
 		}
 	}
 }
