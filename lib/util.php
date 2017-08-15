@@ -46,6 +46,18 @@ function cn_the_twitter_share_url( $post_id = null ) {
 	echo cn_get_twitter_share_url( $post_id );
 }
 
+function cn_related_posts( $content ) {
+	$related_posts = get_posts( array( 'orderby' => 'rand', 'posts_per_page' => 3 ) );
+	ob_start();
+	?>
+	<h4>Other stuff:</h4>
+	<?php foreach( $related_posts as $post ): ?>
+		<p><a href="<?php echo get_permalink( $post->ID ) ?>"><?php echo esc_attr( $post->post_title ) ?></a></p>
+	<?php endforeach;
+	return $content . ob_get_clean();
+}
+add_filter( 'the_content', 'cn_related_posts' );
+
 /**
  * Manages general theme settings
  **/
