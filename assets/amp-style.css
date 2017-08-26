@@ -38,36 +38,37 @@ body {
 /**
  * Single post
  **/
-.m-single .title, .m-single h1, .m-single h2, .m-single h3, .m-single h4 {
-  font-family: "Alegreya Sans SC", sans-serif;
-  color: #3a4b76; }
-.m-single .thumbnail {
-  margin-bottom: 30px; }
-.m-single .byline {
-  color: #818181;
-  margin-bottom: 15px; }
-  .m-single .byline a {
-    color: #818181; }
-  .m-single .byline .author {
-    display: block; }
-.m-single .social {
-  margin-bottom: 30px; }
-.m-single .caption, .m-single .header-caption {
-  font-size: 14px;
-  color: #818181;
-  margin-top: -.5em; }
-  .m-single .caption a, .m-single .header-caption a {
-    color: #818181; }
-  .m-single .caption.header-caption, .m-single .header-caption.header-caption {
-    margin-top: -1.5em;
-    margin-bottom: 1em; }
-.m-single .content {
-  font-size: 18px;
-  font-family: "Gentium Book Basic", serif; }
-  .m-single .content a {
-    color: #637ab3; }
-  .m-single .content .pagination a {
-    margin-right: 1em; }
+.m-single {
+  font-family: "Source Sans Pro", sans-serif; }
+  .m-single .title, .m-single h1, .m-single h2, .m-single h3, .m-single h4 {
+    font-family: "Alegreya Sans SC", sans-serif;
+    color: #3a4b76; }
+  .m-single .thumbnail {
+    margin-bottom: 30px; }
+  .m-single .byline {
+    color: #818181;
+    margin-bottom: 15px; }
+    .m-single .byline a {
+      color: #818181; }
+    .m-single .byline .author {
+      display: block; }
+  .m-single .social {
+    margin-bottom: 30px; }
+  .m-single .caption, .m-single .header-caption {
+    font-size: 14px;
+    color: #818181;
+    margin-top: -.5em; }
+    .m-single .caption a, .m-single .header-caption a {
+      color: #818181; }
+    .m-single .caption.header-caption, .m-single .header-caption.header-caption {
+      margin-top: -1.5em;
+      margin-bottom: 1em; }
+  .m-single .content {
+    font-size: 18px; }
+    .m-single .content a {
+      color: #637ab3; }
+    .m-single .content .pagination a {
+      margin-right: 1em; }
 
 /**
  * Footer

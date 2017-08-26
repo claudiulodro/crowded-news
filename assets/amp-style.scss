@@ -36,6 +36,8 @@ body {
  * Single post
  **/
 .m-single {
+	font-family: $text-font;
+
 	.title, h1, h2, h3, h4 {
 		font-family: $heading-font;
 		color: $cn-blue;
@@ -79,7 +81,6 @@ body {
 
 	.content {
 		font-size: $font-l;
-		font-family: $text-font;
 
 		a {
 			color: $cn-lt-blue;
