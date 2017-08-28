@@ -47,7 +47,7 @@ function cn_the_twitter_share_url( $post_id = null ) {
 }
 
 function cn_related_posts( $content ) {
-	$related_posts = get_posts( array( 'orderby' => 'rand', 'posts_per_page' => 3 ) );
+	$related_posts = get_posts( array( 'orderby' => 'rand', 'posts_per_page' => 3, 'post__not_in' => array( get_the_ID() ) ) );
 	ob_start();
 	?>
 	<h4>Other stuff:</h4>

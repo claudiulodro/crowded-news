@@ -43,6 +43,14 @@ body {
 		color: $cn-blue;
 	}
 
+	pre {
+		background-color: #ddd;
+		padding-top: .5em;
+		padding-bottom: .5em;
+		overflow-y: auto;
+		font-size: 16px;
+	}
+
 	.thumbnail {
 		margin-bottom: 2 * $margin-m;
 	}

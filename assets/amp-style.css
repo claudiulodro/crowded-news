@@ -43,6 +43,12 @@ body {
   .m-single .title, .m-single h1, .m-single h2, .m-single h3, .m-single h4 {
     font-family: "Alegreya Sans SC", sans-serif;
     color: #3a4b76; }
+  .m-single pre {
+    background-color: #ddd;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    overflow-y: auto;
+    font-size: 16px; }
   .m-single .thumbnail {
     margin-bottom: 30px; }
   .m-single .byline {
