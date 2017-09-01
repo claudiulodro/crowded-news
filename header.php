@@ -20,6 +20,9 @@
 			<div class="logo">
 				<?php the_custom_logo() ?>
 			</div>
+			<div class="tagline">
+				<?php echo esc_html( get_bloginfo( 'description' ) ) ?>
+			</div>
 			<div class="meta">
 				<div class="search">
 					<?php get_search_form(); ?>

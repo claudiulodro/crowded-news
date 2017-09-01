@@ -6,13 +6,13 @@ $count = 0;
 	<div class="items-container">
 		<div class="items main">
 			<?php while ( $spotlight_query->have_posts() ): $spotlight_query->the_post(); ?>
-				<?php ++$count ?>
-				<?php if ( $count > 4 ): break; endif; ?>
 				<div class="item">
 					<h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
 					<h4 class="date"><a href="<?php the_permalink() ?>"><?php echo get_the_date() ?></a></h4>
 					<p class="excerpt"><a href="<?php the_permalink() ?>"><?php the_excerpt() ?></a></p>
 				</div>
+				<?php ++$count ?>
+				<?php if ( $count > 3 ): break; endif; ?>
 			<?php endwhile ?>
 		</div>
 		<div class="items secondary">

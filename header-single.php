@@ -24,4 +24,7 @@
 	 				<?php cn_the_amp_image( get_theme_mod( 'custom_logo' ), 'amp-logo' ) ?>
 	 			</span>
 	 		</a>
+	 		<div class="tagline">
+				<?php echo esc_html( get_bloginfo( 'description' ) ) ?>
+			</div>
 	 	</div>

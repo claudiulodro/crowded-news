@@ -50,10 +50,26 @@ function cn_related_posts( $content ) {
 	$related_posts = get_posts( array( 'orderby' => 'rand', 'posts_per_page' => 3, 'post__not_in' => array( get_the_ID() ) ) );
 	ob_start();
 	?>
-	<h4>Other stuff:</h4>
-	<?php foreach( $related_posts as $post ): ?>
-		<p><a href="<?php echo get_permalink( $post->ID ) ?>"><?php echo esc_attr( $post->post_title ) ?></a></p>
-	<?php endforeach;
+	<div class="m-related-posts">
+		<h4>Other stuff:</h4>
+		<div class="items">
+			<?php foreach( $related_posts as $post ): ?>
+				<div class="item">
+					<div class="item-thumbnail">
+						<a href="<?php echo get_permalink( $post->ID ) ?>">
+							<?php echo get_the_post_thumbnail( $post->ID, 'home-category' ) ?>
+						</a>
+					</div>
+					<div class="title">
+						<a href="<?php echo get_permalink( $post->ID ) ?>">
+							<?php echo esc_html( $post->post_title ) ?>
+						</a>
+					</div>
+				</div>
+			<?php endforeach ?>
+		</div>
+	</div>
+	<?php
 	return $content . ob_get_clean();
 }
 add_filter( 'the_content', 'cn_related_posts' );

@@ -36,13 +36,14 @@ body {
  * Nav bar
  **/
 .m-nav {
-  height: 127px;
+  height: 150px;
   position: relative; }
   .m-nav .m-nav--main {
-    height: 60px;
+    height: 80px;
     padding-top: 20px;
     padding-bottom: 0;
-    margin-top: 20px; }
+    margin-top: 20px;
+    position: relative; }
     .m-nav .m-nav--main .links a {
       color: #637ab3; }
     .m-nav .m-nav--main .search label {
@@ -55,9 +56,15 @@ body {
       .m-nav .m-nav--main .logo img {
         height: 100%;
         width: auto; }
+    .m-nav .m-nav--main .tagline {
+      position: absolute;
+      bottom: .75em;
+      text-transform: uppercase;
+      font-weight: bold; }
     .m-nav .m-nav--main .meta {
-      text-align: right;
-      margin-top: 20px; }
+      position: absolute;
+      right: 0;
+      bottom: 15px; }
     .m-nav .m-nav--main .social {
       position: absolute;
       right: 0;

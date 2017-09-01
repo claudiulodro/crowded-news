@@ -26,7 +26,7 @@ body {
  * Nav bar
  **/
 .m-nav {
-  height: 75px;
+  height: 100px;
   padding-top: 30px;
   border-bottom: 1px solid #3a4b76; }
   .m-nav .logo {
@@ -34,6 +34,11 @@ body {
     width: 150px; }
     .m-nav .logo .amp-image {
       width: 100%; }
+  .m-nav .tagline {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 6px; }
 
 /**
  * Single post
@@ -58,6 +63,8 @@ body {
       color: #818181; }
     .m-single .byline .author {
       display: block; }
+    .m-single .byline .site-title {
+      font-weight: bold; }
   .m-single .social {
     margin-bottom: 30px; }
   .m-single .caption, .m-single .header-caption {
@@ -76,15 +83,19 @@ body {
     .m-single .content .pagination a {
       margin-right: 1em; }
 
-/**
- * Footer
- **/
-.m-footer .home {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border: 3px solid #3a4b76;
-  width: 63px;
-  padding: 5px;
-  padding-top: 8px; }
+.m-related-posts .item {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 1em; }
+.m-related-posts .item-thumbnail {
+  width: 60px;
+  height: 60px;
+  margin-right: 1em;
+  float: left;
+  border: 1px solid #3a4b76; }
+  .m-related-posts .item-thumbnail a {
+    display: block;
+    width: 100%;
+    height: 100%; }
 
 /*# sourceMappingURL=amp-style.css.map */

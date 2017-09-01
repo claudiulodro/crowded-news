@@ -18,7 +18,7 @@ body {
  * Nav bar
  **/
 .m-nav {
-	height: 75px;
+	height: 100px;
 	padding-top: 2 * $margin-m;
 	border-bottom: 1px solid $cn-blue;
 
@@ -29,6 +29,13 @@ body {
 		.amp-image {
 			width: 100%
 		}
+	}
+
+	.tagline {
+		font-family: $text-font;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-top: 6px;
 	}
 }
 
@@ -66,6 +73,10 @@ body {
 		.author {
 			display: block;
 		}
+
+		.site-title {
+			font-weight: bold;
+		}
 	}
 
 	.social {
@@ -102,16 +113,24 @@ body {
 	}
 }
 
-/**
- * Footer
- **/
-.m-footer {
-	.home {
-		margin-top: 2 * $margin-m;
-		margin-bottom: 2 * $margin-m;
-		border: 3px solid $cn-blue;
-		width: 63px;
-		padding: 5px;
-		padding-top: 8px;
+.m-related-posts {
+	.item {
+		clear: both;
+		overflow: hidden;
+		margin-bottom: 1em;
+	}
+
+	.item-thumbnail {
+		width: 60px;
+		height: 60px;
+		margin-right: 1em;
+		float: left;
+		border: 1px solid $border_color;
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
 	}
 }
