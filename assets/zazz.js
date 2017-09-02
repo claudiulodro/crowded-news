@@ -1,32 +1,28 @@
-( function( $ ) {
+// Use react for this.
+	( function( $ ) {
+		function viewscreenURL( canonical ) {
+			return canonical + '?viewscreen=1';
+		}
 
-	//Homepage Featured Carousel
-	$( '.h-home-carousel' ).find( '.h-unslider' ).unslider( {
-		autoplay: true,
-		speed: 700,
-		delay: 3000
-	} );
+		var $links = $( '.m-viewer .links a' );
+		var $viewscreen = $( '.m-viewer .viewscreen' );
 
-	if ( $( window ).width() > 800 ) {
+		$viewscreen.attr( 'src', viewscreenURL( $links.first().attr( 'href' ) ) );
 
-		//Latest News Marquee
-		$( '.h-latest-news' ).find( '.h-unslider' ).unslider( {
-			autoplay: true,
-			speed: 1500,
-			delay: 6000
-		} );
+		$links.on( 'mouseenter click', function( evt ) {
+			evt.preventDefault();
 
-		//Homepage Category Carousels
-		$( '.h-carousel-row.h-unslider').unslider( {
-			autoplay: true,
-			speed: 700,
-			delay: 6000, 
-			nav: false,
-			arrows: {
-				prev: '<a class="unslider-arrow prev"><i class="fa fa-chevron-circle-left"></i></a>',
-				next: '<a class="unslider-arrow next"><i class="fa fa-chevron-circle-right"></i></a>',
+			if ( $( this ).hasClass('active') ) {
+				return;
 			}
-		} );
-	}
 
-} )( jQuery );
+			$viewscreen.attr( 'src', viewscreenURL( $( this ).attr( 'href' ) ) );
+			$links.removeClass( 'active' );
+			$( this ).addClass( 'active' );
+			$links.find( '.arrow' ).remove();
+			var arrow_size = ( $( this ).height() + ( parseInt( $( this ).css( 'padding' ) ) * 2 ) ) / 2;
+			$( this ).append( '<div class="arrow" style="border-top-width: ' + arrow_size + 'px; border-bottom-width: ' + arrow_size + 'px"></div>' );
+		} ); 
+
+		$links.first().trigger( 'mouseenter');
+	} )( jQuery );

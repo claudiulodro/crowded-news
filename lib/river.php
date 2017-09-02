@@ -1,61 +1,6 @@
 <?php
 
 /**
- * Manages the different sections posts are displayed in on the homepage
- **/
-class CN_PostSections {
-
-	const META_CAROUSEL = 'cn_include_carousel';
-	const META_FEATURED = 'cn_include_featured';
-	const META_SPOTLIGHT = 'cn_include_spotlight';
-
-	const SIZE_CAROUSEL = 4;
-	const SIZE_FEATURED = 2;
-	const SIZE_SPOTLIGHT = 10;
-
-	/**
-	 * Get the query for the homepage featured carousel
-	 * @param $category_id - int - optional results category
-	 * @return WP_Query
-	 **/
-	public static function get_carousel_query() {
-		return new WP_Query(
-			array(
-				'posts_per_page' => CN_PostSections::SIZE_CAROUSEL,
-			)
-		);
-	}
-
-	/**
-	 * Get the query for the homepage featured area
-	 * @param $category_id - int - optional results category
-	 * @return WP_Query
-	 **/
-	public static function get_featured_query() {
-		return new WP_Query(
-			array(
-				'posts_per_page' => CN_PostSections::SIZE_FEATURED,
-				'offset' => CN_PostSections::SIZE_CAROUSEL,
-			)
-		);
-	}
-
-	/**
-	 * Get the query for the homepage spotlight area
-	 * @param $category_id - int - optional results category
-	 * @return WP_Query
-	 **/
-	public static function get_spotlight_query() {
-		return new WP_Query(
-			array(
-				'posts_per_page' => CN_PostSections::SIZE_SPOTLIGHT,
-				'offset' => CN_PostSections::SIZE_CAROUSEL + CN_PostSections::SIZE_FEATURED,
-			)
-		);
-	}
-}
-
-/**
  * Manages the different sections categories are displayed in on the homepage
  **/
 class CN_CategorySections {

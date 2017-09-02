@@ -18,13 +18,15 @@
  	<?php do_action( 'cn_amp_body' ) ?>
 
  	<div class="site">
-	 	<div class="m-nav">
-	 		<a href="<?php echo site_url() ?>">
-	 			<span class="logo">
-	 				<?php cn_the_amp_image( get_theme_mod( 'custom_logo' ), 'amp-logo' ) ?>
-	 			</span>
-	 		</a>
-	 		<div class="tagline">
-				<?php echo esc_html( get_bloginfo( 'description' ) ) ?>
-			</div>
-	 	</div>
+ 		<?php if ( ! cn_is_viewscreen() ): ?>
+		 	<div class="m-nav">
+		 		<a href="<?php echo site_url() ?>">
+		 			<span class="logo">
+		 				<?php cn_the_amp_image( get_theme_mod( 'custom_logo' ), 'amp-logo' ) ?>
+		 			</span>
+		 		</a>
+		 		<div class="tagline">
+					<?php echo esc_html( get_bloginfo( 'description' ) ) ?>
+				</div>
+		 	</div>
+	 	<?php endif ?>

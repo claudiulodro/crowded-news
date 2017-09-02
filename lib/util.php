@@ -46,9 +46,8 @@ function cn_the_twitter_share_url( $post_id = null ) {
 	echo cn_get_twitter_share_url( $post_id );
 }
 
-function cn_related_posts( $content ) {
+function cn_related_posts() {
 	$related_posts = get_posts( array( 'orderby' => 'rand', 'posts_per_page' => 3, 'post__not_in' => array( get_the_ID() ) ) );
-	ob_start();
 	?>
 	<div class="m-related-posts">
 		<h4>Other stuff:</h4>
@@ -70,9 +69,11 @@ function cn_related_posts( $content ) {
 		</div>
 	</div>
 	<?php
-	return $content . ob_get_clean();
 }
-add_filter( 'the_content', 'cn_related_posts' );
+
+function cn_is_viewscreen() {
+	return ! empty( $_GET['viewscreen'] );
+}
 
 /**
  * Manages general theme settings

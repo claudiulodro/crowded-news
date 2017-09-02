@@ -6,7 +6,7 @@ add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-logo' );
 
 add_image_size( 'home-carousel', 590, 300, true );
-add_image_size( 'home-category-carousel', 230, 80, true );
+add_image_size( 'home-category-carousel', 370, 160, true );
 add_image_size( 'home-category', 60, 60, true );
 
 add_image_size( 'amp-logo', 130, 60, false );

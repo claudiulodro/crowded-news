@@ -1,9 +1,5 @@
 <?php 
 global $page;
-if( cn_is_viewscreen() ):
-	get_template_part( 'single-viewscreen' );
-	return;
-endif;
 
 get_header( 'single' );
 ?>
@@ -36,13 +32,12 @@ get_header( 'single' );
 						'next_or_number' => 'next'
 					) ) ?>
 				</div>
-				<?php cn_related_posts() ?>
 			</div>
 
 			<div class="byline">
-				<span class="date">Published <?php the_date() ?></span> in <span class="categories"><?php the_category( ', ' ) ?></span>
-				<div class="author">By <?php the_author_posts_link() ?></div>
-				<div class="site-title"><a href="<?php echo site_url() ?>"><?php bloginfo( 'name' ) ?></a></div>
+				<span class="date">Published <?php the_date() ?></span>
+				<div class="author">By <?php the_author() ?></div>
+				<div class="site-title"><?php bloginfo( 'name' ) ?></div>
 			</div>
 		<?php endwhile; ?>
 	</div>
