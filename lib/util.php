@@ -50,13 +50,13 @@ function cn_related_posts() {
 	$related_posts = get_posts( array( 'orderby' => 'rand', 'posts_per_page' => 3, 'post__not_in' => array( get_the_ID() ) ) );
 	?>
 	<div class="m-related-posts">
-		<h4>Other stuff:</h4>
+		<h4>Also read:</h4>
 		<div class="items">
 			<?php foreach( $related_posts as $post ): ?>
 				<div class="item">
 					<div class="item-thumbnail">
 						<a href="<?php echo get_permalink( $post->ID ) ?>">
-							<?php echo get_the_post_thumbnail( $post->ID, 'home-category' ) ?>
+							<?php cn_the_amp_image( get_post_thumbnail_id( $post->ID ), 'home-category' ) ?>
 						</a>
 					</div>
 					<div class="title">

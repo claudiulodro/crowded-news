@@ -1,7 +1,7 @@
-<div class="m-viewer">
+<div id="h-viewer" class="m-viewer">
 	<div class="links">
 		<?php while( have_posts() ): the_post() ?>
-			<a href="<?php the_permalink() ?>" class="link"><?php the_title() ?></a>
+			<a href="<?php the_permalink() ?>" class="link h-viewable"><?php the_title() ?></a>
 		<?php endwhile ?>
 	</div>
 	<div class="viewer">

@@ -108,16 +108,18 @@ body {
  **/
 .m-archive {
   overflow: hidden; }
-  .m-archive.archive .heading {
-    margin-left: 15px; }
-  .m-archive.archive .results ul {
-    padding-left: 2em;
-    padding-right: 2em; }
-    .m-archive.archive .results ul li {
-      margin-bottom: 1em;
-      color: #3a4b76; }
-      .m-archive.archive .results ul li a {
+  .m-archive.archive {
+    border-top: 1px solid #3a4b76; }
+    .m-archive.archive .heading {
+      margin-left: 15px; }
+    .m-archive.archive .results ul {
+      padding-left: 2em;
+      padding-right: 2em; }
+      .m-archive.archive .results ul li {
+        margin-bottom: 1em;
         color: #3a4b76; }
+        .m-archive.archive .results ul li a {
+          color: #3a4b76; }
   .m-archive.search .nothing-found {
     margin-left: 15px;
     font-weight: bold; }
@@ -302,6 +304,9 @@ body {
       border: 1px solid #818181;
       border-bottom: none; }
 
+.mobile-only {
+  display: none; }
+
 /**
  * Mobile UI tweaks
  **/
@@ -309,30 +314,22 @@ body {
   .site {
     min-width: 100%; }
 
-  .m-home-featured {
-    display: none; }
+  .mobile-only {
+    display: block; }
 
-  .m-archive .sidebar.left {
+  .m-viewer,
+  .m-home-carousel-categories,
+  .m-home-homepage-categories {
     display: none; }
-  .m-archive .sidebar.right {
-    float: none;
-    width: 100%; }
-  .m-archive .container {
-    width: 100%; }
-  .m-archive .wrap {
-    display: none; }
-
-  .m-archive-sidebar-right {
-    margin-top: 0; }
 
   .m-nav {
     height: auto;
-    margin-bottom: 15px; }
+    margin-bottom: 0; }
     .m-nav .search {
       display: none; }
 
-  .m-nav--latest-news {
-    display: none; }
+  .m-sidebar-widget {
+    border-top: 1px solid #3a4b76; }
 
   .m-footer ul {
     padding: 0 !important; }
@@ -342,6 +339,15 @@ body {
     padding: 0 !important; }
 
   .widget_recent_entries li {
-    display: list-item !important; } }
+    display: list-item !important; }
+
+  .rpwe-block h3.rpwe-title {
+    font-size: 16px !important;
+    line-height: 1.2 !important; }
+  .rpwe-block .rpwe-summary {
+    font-size: 14px !important; }
+  .rpwe-block .more-link {
+    margin-left: .25em;
+    color: #637ab3; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -15,8 +15,8 @@ function cn_enqueue_assets() {
 		cn_get_version()
 	);
 	wp_enqueue_script(
-		'cn-zazz',
-		get_template_directory_uri().'/assets/zazz.js',
+		'crowded-news',
+		get_template_directory_uri().'/assets/js/crowded-news.js',
 		array( 'jquery' ),
 		cn_get_version(),
 		true
