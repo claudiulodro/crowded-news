@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+/**
+ * Adds zazz to DocLinks.
+ */
 class ArrowFlair extends React.Component {
 
 	render() {
@@ -21,6 +24,9 @@ class ArrowFlair extends React.Component {
 	}
 }
 
+/**
+ * A link to a document for the viewer.
+ */
 class DocLink extends React.Component {
 
 	constructor( props ) {
@@ -102,6 +108,9 @@ class Viewer extends React.Component {
 	}
 }
 
+/**
+ * Get the party started.
+ */
 var viewLinks = [];
 var viewables = document.getElementsByClassName( 'h-viewable' );
 if ( viewables.length && window.innerWidth > 800 ) {

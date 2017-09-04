@@ -46,6 +46,9 @@ function cn_the_twitter_share_url( $post_id = null ) {
 	echo cn_get_twitter_share_url( $post_id );
 }
 
+/**
+ * Output a related posts section.
+ */
 function cn_related_posts() {
 	$related_posts = get_posts( array( 'orderby' => 'rand', 'posts_per_page' => 3, 'post__not_in' => array( get_the_ID() ) ) );
 	?>
@@ -71,6 +74,10 @@ function cn_related_posts() {
 	<?php
 }
 
+/**
+ * Check whether the current page is loaded in a viewscreen.
+ * @return bool
+ */
 function cn_is_viewscreen() {
 	return ! empty( $_GET['viewscreen'] );
 }

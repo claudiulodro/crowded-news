@@ -1,6 +1,6 @@
 <?php
 
-define( 'CN_VERSION', '0.9.0' );
+define( 'CN_VERSION', '2.0.0' );
 
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-logo' );
